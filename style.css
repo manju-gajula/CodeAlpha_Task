@@ -1,0 +1,125 @@
+body {
+  background: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: right;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #d1d1d1;
+}
+
+.operator {
+  background: #f9c74f;
+}
+
+.operator:hover {
+  background: #f8961e;
+}
+
+.equal {
+  background: #90be6d;
+}
+
+.equal:hover {
+  background: #43aa8b;
+}
+
+.clear {
+  grid-column: span 4;
+  background: #f94144;
+  color: white;
+}
+
+.clear:hover {
+  background: #d00000;
+}
+
+.theme-toggle {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.history-panel {
+  margin-top: 20px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.history-panel h3 {
+  margin-top: 0;
+}
+
+#history {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+/* 🌙 Dark mode */
+body.dark {
+  background: #222;
+  color: #fff;
+}
+
+body.dark .calculator {
+  background: #333;
+}
+
+body.dark #display,
+body.dark .history-panel {
+  background: #444;
+  color: white;
+}
+
+body.dark .btn {
+  background: #555;
+  color: white;
+}
+
+body.dark .btn:hover {
+  background: #666;
+}
